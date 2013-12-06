@@ -1,5 +1,6 @@
 require 'debugger'
 
+
 class Maze
 
   attr_accessor :graph, :file
@@ -19,13 +20,13 @@ class Maze
   end
 
   def print_maze
+    debugger
     @graph.each do |row|
       puts
       row.each do |char|
         print char
       end
     end
-    puts
   end
 
 end
