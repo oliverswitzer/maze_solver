@@ -4,11 +4,12 @@ require './point'
 
 class Maze
 
-  attr_accessor :graph, :file, :point_graph
+  attr_accessor :graph, :file, :point_graph, :points
 
   def initialize(file="maze_text.txt")
     @graph = []
     @file = file
+    @points = []
     pointify
   end
 
@@ -23,6 +24,8 @@ class Maze
         end
       end
     end
+    graph[3][0].type = "mouse"
+    graph[7][10].type = "end"
   end
 
 
